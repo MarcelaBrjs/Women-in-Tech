@@ -99,10 +99,6 @@ footer {
         padding: 10px 60px;
     }
 
-    header img {
-        width: 50px;
-    }
-
     nav {
         justify-content: right;
         flex-wrap: nowrap;
