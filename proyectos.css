@@ -1,8 +1,259 @@
 :root {
-    --lila1: #caa2f2;
-    --lila2: #b679f2;
-    --morado1: #6f23d9;
-    --morado2: #4703a6;
-    --white: #f9f7fd;
+    --morado1: rgb(187, 153, 205);
+    --morado2: rgb(100, 53, 121);
+    --morado3: rgb(61, 24, 96);
+    --white: rgb(245, 237, 247);
     --black: #000000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    min-height: 100vh;
+    background-color: rgb(245, 237, 247, .5);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: var(--morado3);
+}
+
+header img {
+    width: 60px;
+}
+
+nav {
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    width: min-content;
+}
+
+header .section {
+    color: var(--white);
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+header a:hover {
+    color: var(--morado1);
+}
+
+main {
+    min-height: 95vh;
+}
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 100px;
+    text-align: center;
+    margin: 30px auto 30px auto;
+    font-weight: 400;
+    max-width: 400px;
+    padding: 10px 0px;
+    color: var(--morado3);
+}
+
+.proyecto {
+    background-color: var(--morado1);
+}
+
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 35px;
+    letter-spacing: 10px;
+    text-align: center;
+    font-weight: 500;
+    max-width: 400px;
+    padding: 40px 40px;
+    color: var(--morado3);
+    margin: 0px auto;
+}
+
+.proyecto p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    margin: 0px auto;
+    font-weight: 400;
+    max-width: 400px;
+    padding: 0px 40px 40px 40px;
+    color: var(--morado2);
+}
+
+footer {
+    background-color: var(--morado3);
+    text-align: center;
+    padding: 5px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    color: var(--white);
+}
+
+.mySlides1, .mySlides2 {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+.prev:hover, .next:hover {
+    background-color: #f1f1f1;
+    color: black;
+  }
+  
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@media (min-width: 480px) {
+    header {
+        padding: 10px 60px;
+    }
+
+    header img {
+        width: 50px;
+    }
+
+    nav {
+        justify-content: right;
+        flex-wrap: nowrap;
+    }
+
+    header .section {
+        text-align: center;
+        width: min-content;
+        padding: 0px 0px 0px 15px;
+    }
+
+    h1 {
+        max-width: 500px;
+        font-size: 110px;
+    }
+    
+    h2 {
+        max-width: 600px;
+        font-size: 35px;
+    }
+
+    .proyecto p {
+        max-width: 600px;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 10px 80px;
+    }
+
+    header .section {
+        padding: 0px 0px 0px 50px;
+    }
+
+    h1 {
+        max-width: 600px;
+        font-size: 120px;
+        letter-spacing: 15px;
+    }
+    
+    h2 {
+        max-width: 600px;
+        font-size: 50px;
+    }
+
+    .proyecto p {
+        max-width: 600px;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        padding: 10px 80px;
+    }
+
+    header .section {
+        padding: 0px 0px 0px 50px;
+    }
+
+    .proyecto {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .proyecto .text {
+        width: 40%;
+    }
+
+    .proyecto .slideshow-container{
+        width: 60%;
+    }
+
+
+    h1 {
+        max-width: 600px;
+        font-size: 120px;
+        letter-spacing: 15px;
+    }
+    
+    h2 {
+        max-width: 600px;
+        font-size: 50px;
+    }
+
+    .color {
+        background-color: var(--morado2);
+        color: var(--morado1);
+    }
+
+    .proyecto p {
+        color: var(--white);
+        max-width: 600px;
+        font-size: 20px;
+    }
+
 }
